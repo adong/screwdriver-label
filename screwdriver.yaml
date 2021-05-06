@@ -7,7 +7,7 @@ jobs:
     steps:
       - ok: echo ok
       - set-label: |
-          meta set label VERSION_3.0 # this will show up in your pipeline events page
+          meta set label LONG_LONG_LONG_LONG_LONG_LONG_LONG_LABEL_VERSION_3.00000000 # this will show up in your pipeline events page
   B:
     requires: [~pr, ~commit]
     steps:
