@@ -6,14 +6,14 @@ jobs:
     requires: [~pr, ~commit]
     steps:
       - ok: echo ok
+      - set-label: |
+          meta set label VERSION_3.0 # this will show up in your pipeline events page
   B:
     requires: [~pr, ~commit]
     steps:
-      - timeout: sleep 5;
-      - set-label: |
-          meta set label VERSION_3.0 # this will show up in your pipeline events page
       - ok: echo ok
   C:
     requires: [A]
     steps:
       - ok: echo ok
+      - timeout: sleep 60;
