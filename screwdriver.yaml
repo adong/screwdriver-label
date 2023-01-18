@@ -8,7 +8,7 @@ jobs:
       - ok: echo ok
       - set-label: |
 #          meta set label 'Yahoo http://yahoo.com, and scrwedriver https://screwdriver.cd, <script>alert("XSS")</script> <img src="//yahoo.com/fakeAddressToTrackyourIP" /><a href="https://screwdriver.cd" target="_blank" rel="noopener noreferrer">https://screwdriver.cd</a>hello world, heres a link www.yahoo.com, another link https://google.com, final link http://facebook.com # this will show up in your pipeline events page'
-          meta set label 'Yahoo http://yahoo.com<script>alert("XSS")</script><img src="//yahoo.com/fakeAddressToTrackyourIP" />'
+          meta set label 'Yahoo yahoo.com<script>alert("XSS")</script><img src="//yahoo.com/fakeAddressToTrackyourIP" />'
   B:
     requires: [~pr, ~commit]
     steps:
