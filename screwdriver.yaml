@@ -21,4 +21,4 @@ jobs:
   D:
     requires: [A]
     steps:
-      - ok: date +"%Z %z"
+      - get-timezone: date +"%Z %z"
