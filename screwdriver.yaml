@@ -18,3 +18,7 @@ jobs:
     steps:
       - ok: echo ok
       - timeout: sleep 60;
+  D:
+    requires: [A]
+    steps:
+      - ok: date +"%Z %z"
